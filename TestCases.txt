@@ -1,0 +1,18 @@
+Plain text, encryption, Expected result, Result
+-----------------------------------------------------------
+abc, sha256, Found, Found
+abc, bag, Reprompt for valid encryption, Was reprompted
+qwerty, MD5, Found, Found
+password, sha512, Found,Found
+111111, sha224, Found, Found
+1234, sha256, Found, Found
+ejacbd, sha256, Found,
+password123, sha384, Found, Found
+123456, sha256, Found, Found
+DEFAULT, sha224, Found, Found
+a1!, sha256, Found, Found
+
+Notes:
+-Does break if no characters are given for valid characters (aka putting STOP first)
+-Takes a really long time if all characters are included
+-Doesn't support no encryptions for guesses (could easily add this, but decrypting unecrypted input also doesn't make sense)
